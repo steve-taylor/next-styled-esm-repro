@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "hooks": "^0.0.0",
     "lib": "^0.0.0",
     "next": "^12.2.0",
     "react": "^18.2.0",

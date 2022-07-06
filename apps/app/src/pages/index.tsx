@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Heading, Paragraph} from 'lib'
+import {Counter, Heading, Paragraph} from 'lib'
 
 export default function Home() {
     return (
@@ -20,6 +20,8 @@ export default function Home() {
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </Paragraph>
+
+                <Counter/>
             </main>
         </div>
     )

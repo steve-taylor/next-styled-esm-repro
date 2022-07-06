@@ -1,0 +1,26 @@
+{
+  "name": "hooks",
+  "version": "0.0.0",
+  "private": true,
+  "source": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "run-p -c build:*",
+    "build:babel-cjs": "babel --root-mode upward --config-file ./.babelrc.cjs.json -s -x .ts,.tsx ./src -d ./dist/cjs",
+    "build:babel-esm": "babel --root-mode upward -s -x .ts,.tsx ./src -d ./dist/esm",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

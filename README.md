@@ -2,8 +2,10 @@
 
 Context: https://github.com/vercel/next.js/discussions/35905
 
-This branch provides further confirmation that the issue may be with styled components itself. Styled Components has
-been removed and the `Heading` and `Paragraph` apps are created using class-based components.
+In this branch, I try to break the build by adding a package with `"main"` and `"module"` fields pointing to CommonJS
+and ESM entry points respectively, just as `styled-components` does. However, this doesn't break the build. It suggests
+this de facto standard is supported and that it isn't the cause of `styled-components` not being usable as a transitive
+dependency in Next.js.
 
 ## Getting started
 
