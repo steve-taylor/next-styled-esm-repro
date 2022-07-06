@@ -2,8 +2,15 @@
 
 Context: https://github.com/vercel/next.js/discussions/35905
 
-This branch provides further confirmation that the issue may be with styled components itself. Styled Components has
-been removed and the `Heading` and `Paragraph` apps are created using class-based components.
+Like the `without-styled-components` branch on which this branch is based, this branch provides further confirmation
+that the build issue in the `main` branch is related to `styled-components`. This branch adds `react-markdown`, which is
+an ESM-only package.
+
+`react-markdown`'s package.json's `"main"` points to an ES module, not a CommonJS module.
+
+However, `styled-component`'s package.json's `"main"` points to a CommonJS module and its `"module"` points to an ES
+module. This is a legacy configuration which was designed for backwards compatibility, but doesn't seem to be supported
+by Next.js.
 
 ## Getting started
 
