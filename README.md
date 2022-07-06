@@ -2,8 +2,8 @@
 
 Context: https://github.com/vercel/next.js/discussions/35905
 
-This branch provides further confirmation that the issue may be with styled components itself. Styled Components has
-been removed and the `Heading` and `Paragraph` apps are created using class-based components.
+Like the `without-styled-components` branch, this branch also builds successfully. However, this branch imports `React`
+as the `react` module's default export, rather than importing the `Component` named import.
 
 ## Getting started
 

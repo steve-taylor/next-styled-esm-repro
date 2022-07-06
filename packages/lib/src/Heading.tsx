@@ -1,7 +1,7 @@
-import {Component} from 'react'
+import React from 'react'
 import type {HTMLProps} from 'react'
 
-export default class Heading extends Component<HTMLProps<HTMLHeadingElement>> {
+export default class Heading extends React.Component<HTMLProps<HTMLHeadingElement>> {
     render() {
         const {style, ...rest} = this.props
 

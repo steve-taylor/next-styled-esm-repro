@@ -1,7 +1,7 @@
-import {Component} from 'react'
+import React from 'react'
 import type {HTMLProps} from 'react'
 
-export default class Paragraph extends Component<HTMLProps<HTMLParagraphElement>> {
+export default class Paragraph extends React.Component<HTMLProps<HTMLParagraphElement>> {
     render() {
         const {style, ...rest} = this.props
 
