@@ -1,8 +1,12 @@
-import styled from 'styled-components'
+import {Component} from 'react'
+import type {HTMLProps} from 'react'
 
-const Paragraph = styled.h1`
-    font-family: Hevletica, Arial, sans-serif;
-    color: #123;
-`
+export default class Paragraph extends Component<HTMLProps<HTMLParagraphElement>> {
+    render() {
+        const {style, ...rest} = this.props
 
-export default Paragraph
+        return (
+            <h1 {...rest} style={{...style, fontFamily: 'Hevletica, Arial, sans-serif', color: '#123'}}/>
+        )
+    }
+}

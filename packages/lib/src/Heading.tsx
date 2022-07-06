@@ -1,8 +1,12 @@
-import styled from 'styled-components'
+import {Component} from 'react'
+import type {HTMLProps} from 'react'
 
-const Heading = styled.h1`
-    font-family: Georgia, Times, serif;
-    color: #333;
-`
+export default class Heading extends Component<HTMLProps<HTMLHeadingElement>> {
+    render() {
+        const {style, ...rest} = this.props
 
-export default Heading
+        return (
+            <h1 {...rest} style={{...style, fontFamily: 'Georgia, Times, serif', color: '#333'}}/>
+        )
+    }
+}

@@ -1,11 +1,5 @@
 import Head from 'next/head'
 import {Heading, Paragraph} from 'lib'
-import styled from 'styled-components'
-
-const Main = styled.main`
-    background: #eee;
-    padding: 16px;
-`
 
 export default function Home() {
     return (
@@ -15,7 +9,7 @@ export default function Home() {
                 <meta name="description" content="Home page"/>
             </Head>
 
-            <Main>
+            <main style={{background: '#eee', padding: 16}}>
                 <Heading>
                     Heading
                 </Heading>
@@ -26,7 +20,7 @@ export default function Home() {
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </Paragraph>
-            </Main>
+            </main>
         </div>
     )
 }
